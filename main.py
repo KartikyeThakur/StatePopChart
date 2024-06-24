@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import mplcursors
 
-# Loading the Excel file (adjust path as per your requirements)
-df = pd.read_excel(state_population.xlsx', skiprows=2)
+# Load the Excel file (adjust path as needed)
+df = pd.read_excel(r'C:\Users\KARTIKYE\Downloads\state_population.xlsx', skiprows=2)
 
 # Initial exploration and cleaning
 print(df.head())  # Check the first few rows
@@ -34,7 +34,7 @@ for i in range(4):  # Adjust the range to include all years (0, 1, 2, 3 for 1991
         df = df[df[total_pop_col] >= df[female_pop_col]]
 
 # Define the years available in your dataset for plotting
-years = ['1991', '2001', '2011', '2021']  # Update with actual years in your dataset
+years = ['2021', '2011', '2001', '1991']  # Update with actual years in your dataset
 
 # Define colors for each population category
 color_map = {
@@ -94,7 +94,7 @@ for state, state_df in df.groupby('State/UT'):
                 ax.text(i + bar_width, female_pop, 'State not found', ha='center', va='bottom', fontsize=8,
                         color='black', weight='bold')
 
-    # ploting 
+    # Customize plot
     ax.set_xlabel('Year')
     ax.set_ylabel('Population')
     ax.set_title(f'Population Distribution in {state}')

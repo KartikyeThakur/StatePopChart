@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import mplcursors
 
 # Load the Excel file (adjust path as needed)
-df = pd.read_excel(r'C:\Users\KARTIKYE\Downloads\state_population.xlsx', skiprows=2)
+df = pd.read_excel(state_population.xlsx', skiprows=2)
 
 # Initial exploration and cleaning
 print(df.head())  # Check the first few rows

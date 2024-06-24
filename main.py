@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import mplcursors
 
-# Load the Excel file (adjust path as needed)
+# Loading the Excel file (adjust path as per your requirements)
 df = pd.read_excel(r'C:\Users\KARTIKYE\Downloads\state_population.xlsx', skiprows=2)
 
 # Initial exploration and cleaning
@@ -94,7 +94,7 @@ for state, state_df in df.groupby('State/UT'):
                 ax.text(i + bar_width, female_pop, 'State not found', ha='center', va='bottom', fontsize=8,
                         color='black', weight='bold')
 
-    # Customize plot
+    # ploting 
     ax.set_xlabel('Year')
     ax.set_ylabel('Population')
     ax.set_title(f'Population Distribution in {state}')
